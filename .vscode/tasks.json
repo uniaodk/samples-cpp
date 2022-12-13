@@ -8,7 +8,7 @@
 			"args": [
 				"-g",
 				"-std=c++20",
-				"${workspaceFolder}\\*.cpp",
+				"${fileDirname}\\${fileBasenameNoExtension}.cpp",
 				"-o",
 				"${fileDirname}\\main.exe"
 			],
@@ -28,7 +28,7 @@
 			"args": [
 				"-g",
 				"-std=c++20",
-				"${workspaceFolder}\\*.cpp",
+				"${fileDirname}\\${fileBasenameNoExtension}.cpp",
 				"-o",
 				"${fileDirname}\\main.exe"
 			],
@@ -40,27 +40,6 @@
 			],
 			"group": "build",
 			"detail": "compiler: \"C:\\Program Files\\mingw64\\bin\\clang++.exe\""
-		},
-		{
-			"type": "cppbuild",
-			"label": "Build with MSVC",
-			"command": "cl.exe",
-			"args": [
-				"/Zi",
-				"/std:c++latest",
-				"/EHsc",
-				"/Fe:",
-				"${fileDirname}\\run.exe",
-				"${workspaceFolder}\\*.cpp"
-			],
-			"options": {
-				"cwd": "${fileDirname}"
-			},
-			"problemMatcher": [
-				"$msCompile"
-			],
-			"group": "build",
-			"detail": "compiler: cl.exe"
 		}
 	]
 }
